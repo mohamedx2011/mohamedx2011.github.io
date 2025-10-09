@@ -1,0 +1,85 @@
+body{
+  font-family:'Cairo',sans-serif;
+  background:linear-gradient(135deg,#0b132b,#1c2541,#3a506b);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  margin:0;
+  padding:20px;
+  flex-direction:column;
+}
+
+/* لإخفاء الأسهم في متصفحات WebKit مثل Chrome وEdge وOpera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* لإخفائها في Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.card{
+  background:rgba(12,18,43,0.85);
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 0 30px rgba(0,0,0,.4);
+  width:100%;
+  max-width:800px;
+  text-align:center;
+  transition:all .3s ease-in-out;
+}
+.card:hover{box-shadow:0 0 40px rgba(91,192,190,.4)}
+h1{color:#6fffe9;margin-bottom:10px;font-size:28px}
+p{color:#d1d1d1;line-height:1.8;font-size:17px;margin-bottom:10px}
+button{
+  margin-top:25px;
+  background:#5bc0be;
+  border:none;
+  padding:14px 28px;
+  color:#000;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:17px;
+  transition:all .2s;
+}
+button:hover{background:#6fffe9;transform:scale(1.05)}
+label{display:block;margin:15px 0 5px;font-size:16px}
+input{
+  width:90%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#3a506b;
+  color:#fff;
+  font-size:17px;
+  outline:none;
+}
+table{
+  width:100%;
+  margin-top:20px;
+  border-collapse:collapse;
+  font-size:15px;
+}
+th,td{
+  border:1px solid rgba(255,255,255,.1);
+  padding:10px;
+  text-align:center;
+}
+th{background:#3a506b;color:#6fffe9}
+.result{margin-top:15px;font-size:19px;color:#6fffe9;font-weight:bold}
+.explain{
+  margin-top:20px;
+  font-size:16px;
+  color:#d1d1d1;
+  text-align:justify;
+  line-height:1.9;
+  background:rgba(255,255,255,0.05);
+  padding:15px;
+  border-radius:10px;
+}

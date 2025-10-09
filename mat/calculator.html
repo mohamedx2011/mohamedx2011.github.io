@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>حاسبة القاسم الأكبر المشترك — محمد وليد</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <div class="card" id="calculator">
+    <h1>🧮 حاسبة القاسم الأكبر المشترك (PGCD)</h1>
+    <label>العدد الأول:</label>
+    <input type="number" id="num1">
+    <label>العدد الثاني:</label>
+    <input type="number" id="num2">
+    <button onclick="calculateGCD()">احسب النتيجة</button>
+    <div id="output" class="result"></div>
+    <table id="stepsTable">
+      <thead>
+        <tr>
+          <th>a</th>
+          <th>b</th>
+          <th>العملية (a = b × q + r)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="explain" class="explain"></div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
