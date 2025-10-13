@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - الصفحة غير موجودة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      overflow: hidden;
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 120px;
+      font-weight: 700;
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+    h1::after {
+      content: "🚀";
+      position: absolute;
+      right: -45px;
+      top: 10px;
+      font-size: 50px;
+      animation: rocket 3s ease-in-out infinite;
+    }
+    p {
+      font-size: 22px;
+      margin: 20px 0;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #fff;
+      color: #2575fc;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #f0f0f0;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes rocket {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(15deg); }
+    }
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      animation: move 20s linear infinite;
+    }
+    .circle:nth-child(1) { width: 200px; height: 200px; top: 10%; left: 5%; animation-duration: 25s; }
+    .circle:nth-child(2) { width: 150px; height: 150px; top: 70%; left: 80%; animation-duration: 30s; }
+    .circle:nth-child(3) { width: 250px; height: 250px; top: 50%; left: 50%; animation-duration: 35s; }
+    @keyframes move {
+      0% { transform: translateY(0) translateX(0) rotate(0deg); }
+      100% { transform: translateY(-1000px) translateX(1000px) rotate(720deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <div class="container">
+    <h1>404</h1>
+    <p>عذرًا، الصفحة التي تبحث عنها غير موجودة.</p>
+    <a href="/">العودة إلى الصفحة الرئيسية</a>
+  </div>
+</body>
+</html>

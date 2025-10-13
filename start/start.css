@@ -1,39 +1,77 @@
-body{
-  font-family:'Cairo',sans-serif;
-  background:linear-gradient(135deg,#0b132b,#1c2541,#3a506b);
-  color:#fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  margin:0;
-  padding:20px;
-  flex-direction:column;
-}
+    /* تراكب الصفحة بالكامل في الوسط */
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg,#0b132b,#1c2541,#3a506b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
 
-.card{
-  background:rgba(12,18,43,0.85);
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 0 30px rgba(0,0,0,.4);
-  width:100%;
-  max-width:800px;
-  text-align:center;
-  transition:all .3s ease-in-out;
-}
-.card:hover{box-shadow:0 0 40px rgba(91,192,190,.4)}
-h1{color:#6fffe9;margin-bottom:10px;font-size:28px}
-p{color:#d1d1d1;line-height:1.8;font-size:17px;margin-bottom:10px}
-button{
-  margin-top:25px;
-  background:#5bc0be;
-  border:none;
-  padding:14px 28px;
-  color:#000;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:bold;
-  font-size:17px;
-  transition:all .2s;
-}
-button:hover{background:#6fffe9;transform:scale(1.05)}
+    .card {
+      background: rgba(12,18,43,0.85);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 0 30px rgba(0,0,0,.4);
+      max-width: 700px;
+      width: 100%;
+      text-align: center; /* محاذاة كل شيء في الوسط */
+      direction: rtl; /* للحفاظ على اتجاه الكتابة العربي */
+      transition: all .3s ease-in-out;
+    }
+    .card:hover {
+      box-shadow: 0 0 40px rgba(91,192,190,.4);
+    }
+
+    h1 {
+      color: #6fffe9;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    p, ul li {
+      color: #d1d1d1;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: center; /* محاذاة كل النصوص في الوسط */
+    }
+
+    ul {
+      list-style: disc;
+      padding: 0;
+      margin: 10px auto;
+      display: inline-block; /* ليكون في وسط الصفحة */
+      text-align: left; /* القوائم الداخلية تبقى من اليمين لليسار */
+    }
+
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 17px;
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #5bc0be;
+      color: #000;
+      transition: all .2s;
+    }
+    button:hover {
+      background: #6fffe9;
+      transform: scale(1.05);
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
