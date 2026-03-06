@@ -1128,13 +1128,14 @@
         <img src="./f2.png" alt="CodeCraft Logo">
     </div>
     <nav>
+        <a href="#home" class="nav-link">الرئيسية</a>
         <a href="#services" class="nav-link">خدماتنا</a>
         <a href="#portfolio" class="nav-link">أعمالنا</a>
         <a href="#contact" class="nav-link">تواصل معنا</a>
     </nav>
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-content">
         <h2>نصنع من الكود<br>تحفاً رقمية</h2>
         <p>في CodeCraft، نحول أفكارك إلى مواقع ويب متكاملة بقواعد بيانات عالية الأداء ولوحات تحكم ذكية، لتميز رقمي لا حدود له 24/7</p>
@@ -1293,6 +1294,15 @@
 (function() {
     // دالة التمرير السلس
     function smoothScroll(targetId) {
+        // إذا كان الهدف هو home، نمرر إلى أعلى الصفحة
+        if (targetId === '#home') {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+            return;
+        }
+        
         const targetSection = document.querySelector(targetId);
         if (targetSection) {
             window.scrollTo({ 
@@ -1321,6 +1331,7 @@
     // دالة تحديد الرابط النشط في الهيدر
     function setActiveLink() {
         const sections = { 
+            home: document.getElementById('home'),
             services: document.getElementById('services'), 
             portfolio: document.getElementById('portfolio'), 
             contact: document.getElementById('contact') 
@@ -1329,9 +1340,11 @@
         const scrollPosition = window.scrollY + 150;
         let activeSection = null;
         
+        // التحقق من أي قسم نشط
         if (sections.contact && scrollPosition >= sections.contact.offsetTop) activeSection = 'contact';
         else if (sections.portfolio && scrollPosition >= sections.portfolio.offsetTop) activeSection = 'portfolio';
         else if (sections.services && scrollPosition >= sections.services.offsetTop) activeSection = 'services';
+        else if (sections.home && scrollPosition < sections.services.offsetTop) activeSection = 'home';
         
         navLinks.forEach(link => link.classList.remove('active'));
         
