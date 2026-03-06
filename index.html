@@ -303,6 +303,7 @@
             animation: fadeInUp 0.8s ease 0.4s both;
             width: auto;
             max-width: 90%;
+            cursor: pointer; /* تأكيد أن المؤشر يشير إلى أن العنصر قابل للنقر */
         }
         
         .hero .btn:hover {
@@ -1137,7 +1138,8 @@
     <div class="hero-content">
         <h2>نصنع من الكود<br>تحفاً رقمية</h2>
         <p>في CodeCraft، نحول أفكارك إلى مواقع ويب متكاملة بقواعد بيانات عالية الأداء ولوحات تحكم ذكية، لتميز رقمي لا حدود له 24/7</p>
-        <a href="#contact" class="btn">اطلب استشارة مجانية</a>
+        <!-- تم إضافة كلاس 'nav-link' هنا لضمان عمل التمرير السلس -->
+        <a href="#contact" class="btn nav-link">اطلب استشارة مجانية</a>
         
         <div class="stats">
             <div class="stat-item"><div class="stat-number">+50</div><div class="stat-label">مشروع مكتمل</div></div>
@@ -1196,7 +1198,7 @@
         <div class="portfolio-item">
             <div class="portfolio-image">
                 <img src="./f3.png" alt="مساعد رياضيات">
-                <div class="portfolio-overlay"><div class="portfolio-links"><a href="https://mohamedx2011.github.io/" target="_blank"><i class="fas fa-external-link-alt"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div>
+                <div class="portfolio-overlay"><div class="portfolio-links"><a href="https://mohamedx2011.github.io/Mathly" target="_blank"><i class="fas fa-external-link-alt"></i></a><a href="#"><i class="fas fa-search"></i></a></div></div>
             </div>
             <div class="portfolio-info">
                 <h3>منصة مساعد الرياضيات</h3>
@@ -1300,8 +1302,8 @@
         }
     }
 
-    // تفعيل التمرير السلس لروابط الهيدر
-    document.querySelectorAll('nav a.nav-link').forEach(link => {
+    // تفعيل التمرير السلس لروابط الهيدر وزر الهيرو (لأنه تمت إضافة كلاس nav-link له)
+    document.querySelectorAll('nav a.nav-link, a.nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             smoothScroll(this.getAttribute('href'));
